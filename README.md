@@ -1,9 +1,10 @@
 # EMP Vue3 基站模板工程
+
 ## 依赖库 package.json
 
-```json
+``` json
   "devDependencies": {
-    "@efox/emp-cli": "^1.0.29",
+    "@efox/emp-cli": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.0-rc.10",
     "vue-loader": "^16.0.0-beta.5"
   },
@@ -13,7 +14,8 @@
 ```
 
 ## 微前端配置 emp-config.js
-```javascript
+
+``` javascript
 const path = require('path')
 const {VueLoaderPlugin} = require('vue-loader')
 //
@@ -33,10 +35,12 @@ module.exports = ({config, env, empEnv}) => {
   config.resolve.alias.set('vue', '@vue/runtime-dom')
   config.plugin('vue3').use(VueLoaderPlugin, [])
   config.module
+
     .rule('vue')
     .test(/\.vue$/)
     .use('vue-loader')
     .loader('vue-loader')
+
   //
   const host = conf.host
   const port = conf.port
@@ -46,6 +50,7 @@ module.exports = ({config, env, empEnv}) => {
   config.devServer.port(port)
   //
   config.plugin('mf').tap(args => {
+
     args[0] = {
       ...args[0],
       ...{
@@ -62,9 +67,11 @@ module.exports = ({config, env, empEnv}) => {
       },
     }
     return args
+
   })
   //
   config.plugin('html').tap(args => {
+
     args[0] = {
       ...args[0],
       ...{
@@ -75,7 +82,8 @@ module.exports = ({config, env, empEnv}) => {
       },
     }
     return args
+
   })
 }
 
-``` 
+```
