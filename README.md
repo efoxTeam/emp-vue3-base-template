@@ -1,5 +1,6 @@
 # EMP Vue3 基站模板工程
 ## 依赖库 package.json
+
 ```json
   "devDependencies": {
     "@efox/emp-cli": "^1.0.29",
@@ -10,6 +11,7 @@
     "vue": "^3.0.0-rc.10"
   },
 ```
+
 ## 微前端配置 emp-config.js
 ```javascript
 const path = require('path')
