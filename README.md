@@ -1,4 +1,4 @@
-# Emp Vue3  
+# EMP Vue3 基站模板工程
 ## 依赖库 package.json
 ```json
   "devDependencies": {
