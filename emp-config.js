@@ -2,7 +2,7 @@ const withVue3 = require('@efox/emp-vue3')
 const path = require('path')
 const ProjectRootPath = path.resolve('./')
 const { getConfig } = require(path.join(ProjectRootPath, './src/config'))
-//
+
 module.exports = withVue3(({ config, env, empEnv }) => {
   const confEnv = env === 'production' ? 'prod' : 'dev'
   const conf = getConfig(empEnv || confEnv)
