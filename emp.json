@@ -1,0 +1,10 @@
+{
+  "name": "vue3Components",
+  "remotes": {
+  },
+  "exposes": {
+    "./Content": "./src/components/Content",
+    "./Button": "./src/components/Button"
+  },
+  "shared": []
+}
